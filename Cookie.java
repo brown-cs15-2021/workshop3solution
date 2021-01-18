@@ -5,6 +5,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 public class Cookie {
+    private Pane _cookiePane;
     private Circle _cookieBase;
     private Circle _chocChip1;
     private Circle _chocChip2;
@@ -12,7 +13,10 @@ public class Cookie {
     private Circle _chocChip4;
 
     // Cookie Constructor
-    public Cookie(Pane alienPane) {
+    public Cookie(Pane cookiePane) {
+        // initialize _cookiePane instance variable
+        _cookiePane = cookiePane;
+
         // make cookie base
         this.makeCookieBase();
 
@@ -22,9 +26,10 @@ public class Cookie {
         _chocChip3 = this.addChocChip(12,-2);
         _chocChip4 = this.addChocChip(19,-34);
         _chocChip4 = this.addChocChip(-24,-35);
-
-        //forget to add to pane and have students catch the mistake!
-        alienPane.getChildren().addAll(_cookieBase, _chocChip1, _chocChip2, _chocChip3, _chocChip4);
+        // forget to add to pane and have students catch the mistake!
+        // students might ask "what if we added to the pane in addChocChip?"
+        //  |-> this should be okay because we are assigning these shapes (line 24-28) by reference.
+        _cookiePane.getChildren().addAll(_chocChip1, _chocChip2, _chocChip3, _chocChip4);
     }
 
     private void makeCookieBase(){
@@ -34,6 +39,7 @@ public class Cookie {
         _cookieBase.setCenterX(Constants.COOKIE_POSITION);
         _cookieBase.setCenterY(Constants.COOKIE_POSITION);
         _cookieBase.setRadius(Constants.COOKIE_RADIUS);
+        _cookiePane.getChildren().add(_cookieBase);
     }
 
     private Circle addChocChip(double x_pos, double y_pos){
