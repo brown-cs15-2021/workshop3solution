@@ -10,7 +10,7 @@ public class PaneOrganizer {
         _root = new BorderPane();
         Pane alienPane = new Pane();
         _root.setCenter(alienPane);
-        new Alien(alienPane);
+        new Cookie(alienPane);
     }
     public Pane getRoot() {
         return _root;

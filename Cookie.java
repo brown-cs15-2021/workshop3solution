@@ -4,8 +4,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class Alien {
-    public Alien(Pane alienPane) {
+public class Cookie {
+    public Cookie(Pane alienPane) {
         Circle circle = new Circle();
         circle.setFill(Color.YELLOW);
         circle.setCenterX(Constants.ALIEN_POSITION);
