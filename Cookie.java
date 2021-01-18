@@ -43,12 +43,12 @@ public class Cookie {
     }
 
     private Circle addChocChip(double x_pos, double y_pos){
-            // Instantiate chocolate chip
-            Circle myChocChip = new Circle();
-            myChocChip.setFill(Color.ROSYBROWN);
-            myChocChip.setCenterX(Constants.COOKIE_POSITION+x_pos);
-            myChocChip.setCenterY(Constants.COOKIE_POSITION+y_pos);
-            myChocChip.setRadius(Constants.CHOCO_CHIP_RADIUS);
-            return myChocChip;
+        // Instantiate chocolate chip
+        Circle myChocChip = new Circle();
+        myChocChip.setFill(Color.ROSYBROWN);
+        myChocChip.setCenterX(Constants.COOKIE_POSITION+x_pos);
+        myChocChip.setCenterY(Constants.COOKIE_POSITION+y_pos);
+        myChocChip.setRadius(Constants.CHOCO_CHIP_RADIUS);
+        return myChocChip;
     }
 }
