@@ -8,9 +8,9 @@ public class PaneOrganizer {
 
     public PaneOrganizer() {
         _root = new BorderPane();
-        Pane alienPane = new Pane();
-        _root.setCenter(alienPane);
-        new Cookie(alienPane);
+        Pane cookiePane = new Pane();
+        _root.setCenter(cookiePane);
+        new Cookie(cookiePane);
     }
     public Pane getRoot() {
         return _root;
