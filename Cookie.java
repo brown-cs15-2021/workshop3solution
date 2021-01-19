@@ -24,7 +24,6 @@ public class Cookie {
         _chocChip1 = this.addChocChip(28,40);
         _chocChip2 = this.addChocChip(-40,8);
         _chocChip3 = this.addChocChip(12,-2);
-        _chocChip4 = this.addChocChip(19,-34);
         _chocChip4 = this.addChocChip(-24,-35);
         // forget to add to pane and have students catch the mistake!
         // students might ask "what if we added to the pane in addChocChip?"
