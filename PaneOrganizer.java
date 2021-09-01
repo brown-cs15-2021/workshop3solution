@@ -4,16 +4,16 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
 public class PaneOrganizer {
-    private BorderPane _root;
+    private BorderPane root;
 
     public PaneOrganizer() {
-        _root = new BorderPane();
+        this.root = new BorderPane();
         Pane cookiePane = new Pane();
-        _root.setCenter(cookiePane);
+        this.root.setCenter(cookiePane);
         new Cookie(cookiePane);
     }
     public Pane getRoot() {
-        return _root;
+        return this.root;
     }
 }
 
