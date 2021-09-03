@@ -16,14 +16,19 @@ public class Cookie {
         this.makeCookieBase();
 
         // add chocolate chips (1-4)
-        Circle chocChip1 = this.addChocChip(28,40);
-        Circle chocChip2 = this.addChocChip(-40,8);
-        Circle chocChip3 = this.addChocChip(12,-2);
-        Circle chocChip4 = this.addChocChip(-24,-35);
+        this.addChocChip(28,40);
+        this.addChocChip(-40,8);
+        this.addChocChip(12,-2);
+        this.addChocChip(-24,-35);
+        /*
+        * this seems weird above think about changing
+        * why would you make local vars if you dont have to just to add to the pane if you could add to the pane in the bottom
+        * *** ask*/
+
         // forget to add to pane and have students catch the mistake!
         // students might ask "what if we added to the pane in addChocChip?"
         //  |-> this should be okay because we are assigning these shapes (line 24-28) by reference.
-        this.cookiePane.getChildren().addAll(chocChip1, chocChip2, chocChip3, chocChip4);
+//        this.cookiePane.getChildren().addAll(chocChip1, chocChip2, chocChip3, chocChip4);
     }
 
     private void makeCookieBase(){
@@ -43,6 +48,7 @@ public class Cookie {
         myChocChip.setCenterX(Constants.COOKIE_POSITION+x_pos);
         myChocChip.setCenterY(Constants.COOKIE_POSITION+y_pos);
         myChocChip.setRadius(Constants.CHOCO_CHIP_RADIUS);
+        this.cookiePane.getChildren().add(myChocChip);
         return myChocChip;
     }
 }
